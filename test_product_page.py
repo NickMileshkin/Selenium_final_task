@@ -1,12 +1,12 @@
 import pytest
-from pages.product_page import ProductPage
-from pages.login_page import LoginPage
-from pages.basket_page import BasketPage
+from .pages.product_page import ProductPage
+from .pages.login_page import LoginPage
+from .pages.basket_page import BasketPage
 import time
 
 
 @pytest.mark.need_review
-def test_guest_can_add_product_to_basket(browser, link):
+def test_guest_can_add_product_to_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
     product_page = ProductPage(browser, link)
     product_page.open()
